@@ -1,0 +1,73 @@
+@import url("http://fonts.cdnfonts.com/css/red-hat-display");
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: #E7F6F2;  
+  color: black;
+  width: 100%;
+}
+footer {
+    background-color: #2C3333;
+    color: #D4ECDD;
+  }
+  /* start */
+  .main-nav {
+    width: 100%;
+    background: black;
+    min-height: 30px;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+  }
+  .card {
+    margin: 30px;
+    padding: 20px 40px 40px;
+    max-width: 500px;
+    text-align: left;
+    background: #fff;
+    border-bottom: 4px solid #ccc;
+    border-radius: 6px;
+    transition: all .5s;
+  }
+  .card:hover {
+    border-color: #ff99ff;
+  }
+  
+  ul.skills {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .skills li {
+    border-radius: 6px;
+    display: inline-block;
+    background: #ff9904;
+    color: white;
+    padding: 5px 10px;
+    margin: 2px;
+  }
+  
+  .skills li:nth-child(odd) {
+    background: #0399ff;
+  }
+  @media screen and (min-width: 720px) {
+  
+    .flex {
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: flex; 
+        max-width: 1200px;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+  
+    main {
+      padding-top: 20px;
+    }
+  
+    main p {
+      line-height: 1.6em;
+    }
+  
+  }
+  
+  /* end start */
