@@ -9,3 +9,4 @@ $("#form-footer").submit(function(e){
     //clear footer
     $("#input-email-footer").val("");
 });
+//type

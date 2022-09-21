@@ -56,7 +56,44 @@
     </nav>
    <!--end navigation-->
    <!--Start-->
-   
+   <div class="timeline-container">
+    <ul class="vertical-scrollable-timeline">
+    <li>
+      <h2  style="color:white; padding-right: 30px;">Primary Education</h2>
+      <p class="ed-text"> 2006-2012 <br>
+        Bagong Bayon 1 Elementary School<br>
+        Brgy. Bagong Nayon, Antipolo City</p> 
+      <div class="icon-holder">
+      </div>
+    </li>
+    <li>
+      <h2  style="color:white; padding-right: 30px;">Secondary Education</h2>
+      <p  class="ed-text">2012-2016 <br>
+        Antipolo National High School <br>
+        Olalia Road, Brgy. Sta. Cruz, Antipolo City</p>
+      <div class="icon-holder">
+      </div>
+    </li>
+    <li>
+        <h2  style="color:white; padding-right: 30px;">Secondary Education (Senior)</h2>
+        <p  class="ed-text">2016-2018<br>
+            Antipolo City Senior High School <br>
+            Olalia Road, Brgy. Sta. Cruz, Antipolo City</p>
+        <div class="icon-holder">
+        </div>
+      </li>
+    <li>
+      <h2 style="color:white; padding-right: 30px;">Tertiary Education</h2>
+      <p class="ed-text">2018-2022<br>
+        Bachelor of Science in Information Technology<br> 
+        Rizal Technological University<br>
+        Brgy. Malamig, Boni Ave. Mandaluyong City</p>
+      <div class="icon-holder">
+      </div>
+    </li>
+  </ul>
+  </div>
+  
    <!--End start-->
     
  <!-- footer -->
@@ -75,5 +112,25 @@
     $.getScript("js/footer.js");
   });
 </script>
+<script>
+    $(window).on('scroll', function(){
+  function isScrollIntoView(elem, index) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(window).height()*.5;
+    if(elemBottom <= docViewBottom && elemTop >= docViewTop) {
+      $(elem).addClass('active');
+    }
+    if(!(elemBottom <= docViewBottom)) {
+      $(elem).removeClass('active');
+    }
+  }
+  var timeline = $('.vertical-scrollable-timeline li');
+  Array.from(timeline).forEach(isScrollIntoView);
+});
+</script>
+
+
 </body>
 </html>

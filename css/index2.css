@@ -20,6 +20,7 @@ body {
     animation: on .6s ease-in-out 3.7s forwards;
 }
 .text p {
+    color: #D4ECDD;
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
