@@ -19,16 +19,7 @@ body {
     -o-animation: on .6s ease-in-out 3.7s forwards;
     animation: on .6s ease-in-out 3.7s forwards;
 }
-.text p {
-    color: #D4ECDD;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    -webkit-animation: type .3s steps(60, end) 3.7s;
-    -moz-animation: type .3s steps(60, end) 3.7s;
-    -o-animation: type .3s steps(60, end) 3.7s;
-    animation: type .3s steps(60, end) 3.7s;
-}
+
 .text p:nth-child(2) {
     -webkit-animation: type2 .5s steps(60, end) 3.7s;
     -moz-animation: type2 .5s steps(60, end) 3.7s;
@@ -422,3 +413,43 @@ body {
         fill: #395B64;
    }
 }
+/*typewriter*/
+:root {
+    --bg-color: #2E3D4B;
+    --text-color: #6AE3FF;
+}
+
+
+.typewriter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 56px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.typewriter span {
+    color: var(--text-color);
+    text-transform: uppercase;
+    
+    border-right: solid var(--text-color) 10px; 
+    animation: cursor 1s ease-in-out infinite;
+    white-space: initial;
+}
+
+@keyframes cursor {
+    from { border-color: var(--text-color); }
+    to { border-color: transparent; }
+}
+
+@media (max-width: 576px) {
+    .typewriter { font-size: 24px; }
+}
+@media (max-width: 768px) {
+    .typewriter { font-size: 36px; }
+}
+
+  

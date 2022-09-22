@@ -10,7 +10,15 @@ footer {
     color: #D4ECDD;
   }
   /* start */
+  h5 {
+    text-align: center;
+    margin-bottom: 100px;
 
+    font-size: 20px;
+    font-weight: 600;
+    color: #D4ECDD;
+    
+ }
 .container .card
 {
     max-width: 300px;
@@ -65,16 +73,16 @@ footer {
     }
 }
   /* picture*/
-  .me {
+  #me {
     text-align: center;
     background-size: cover;
     overflow: hidden;
     padding-top: 40px;
   }
-  .me {
+  #me {
     line-height: 1.5;
   }
-  .me .profile-image {
+  #me .profile-image {
     margin-top: 50px;
     width: 200px;
     height: 200px;
@@ -82,7 +90,7 @@ footer {
     border: 3px solid white;
     transition: all .5s;
   }
-  .me .profile-image:hover {
+  #me .profile-image:hover {
     transform: scale(1.2) rotate(5deg);
   }
   @media screen and (min-width: 720px) {
@@ -151,7 +159,7 @@ footer {
   /* timeline */
   h1 {
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 10px;
     margin-top: 10px;
     font-size: 50px;
     font-weight: 600;
@@ -160,7 +168,6 @@ footer {
   .timeline-container {
     display: flex;
     justify-content: center;
-    padding-bottom: 300px;
     padding-top: 200px;
  }
   .timeline-container .vertical-scrollable-timeline {
@@ -169,7 +176,7 @@ footer {
  }
   .timeline-container .vertical-scrollable-timeline li {
     position: relative;
-    padding: 35px 0px 125px 158px;
+    padding: 41px 0px 123px 128px;
  }
   .timeline-container .vertical-scrollable-timeline li:last-child {
     margin-bottom: 0;
@@ -256,6 +263,71 @@ footer {
   
 }
   /*end timeline*/
-  /*typewriter*/
+  /* achieve */
+  p.site-title {
+    color: #000000;
+  }
+  article.col-md-4 col-lg-3 {
+    background: #f5f5f5;
+    margin-top: 1em;  
+    margin-bottom: 2em;
+    box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+  }
+  div.card-content {
+    background: #112031;
+    padding: 0.5em;
+    margin-top: 1em;  
+    margin-bottom: 2em;
+    box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+  }    
+  div.card-content h3 {
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  div.card-content p {
+    font-size: 95%;
+  }
 
+  h4.spectrum-h2 {
+    color:white;
+   }
+   div a, a:hover {
+    text-decoration: none;
+  }
   
+  div a:hover {
+    opacity: 0.8;
+  } 
+  .image-wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.banner-content {
+    position: absolute;
+    z-index: 99999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    line-height: 1.5;
+}
+.img-content img {
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: none;
+    opacity: .8;
+    z-index: 999;
+    height: 100%;
+}  
