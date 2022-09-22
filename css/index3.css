@@ -1,0 +1,210 @@
+
+  
+  div {
+    box-sizing: content-box;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .title-exp {
+    line-height: 1em;
+  }
+  .card-title-exp {
+    font-weight: lighter;
+    line-height: 30px;
+  }
+  
+  .container-exp {
+    width: 100%;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .card-exp {
+    height: 500px;
+    margin: 0 0 20px;
+    position: relative;
+  }
+  .card-exp .card-image-exp {
+    background: #666;
+    display: inline-flex;
+    overflow: hidden;
+    height: 400px;
+    width: auto;
+    transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+    position: relative;
+    z-index: 1;
+  }
+  .card-exp .card-image-exp img {
+    height: 400px;
+    transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+  }
+  .card-exp .card-title-exp {
+    background: #0fc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+    transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+    margin: -5px 0 0 -20px;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+  }
+  .card-exp .card-title-exp::before {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent #00b38f transparent;
+    transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+    z-index: -1;
+  }
+  .card-exp .card-title-exp::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 20px;
+    border-color: #00b38f transparent transparent transparent;
+    transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+    z-index: -1;
+  }
+  .card-exp .card-detail-exp {
+    background: #00e6b8;
+    background: #eee;
+    height: auto;
+    margin: 0;
+    transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+  }
+  .card-exp .tgl-btn {
+    background: #D4ECDD;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    border-radius: 50px;
+    z-index: 99;
+    top: 10px;
+    right: 10px;
+    transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+  }
+  .card-exp .tgl-btn span {
+    background: #000;
+    display: block;
+    height: 2px;
+    width: 50px;
+    margin: 20px;
+    position: relative;
+    transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+  }
+  .card-exp .tgl-btn span::before, .card .tgl-btn span::after {
+    content: "";
+    background: #000;
+    display: block;
+    height: 2px;
+    width: 50px;
+    position: absolute;
+    transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+  }
+  .card-exp .tgl-btn span::before {
+    bottom: -10px;
+  }
+  .card-exp .tgl-btn span::after {
+    bottom: -5px;
+  }
+  .card-exp [type=checkbox] {
+    display: none;
+  }
+  .card-exp [type=checkbox]:checked + .tgl-btn {
+    background: transparent;
+  }
+  .card-exp [type=checkbox]:checked + .tgl-btn span {
+    background: #0fc;
+    width: 0;
+  }
+  .card-exp [type=checkbox]:checked + .tgl-btn span::before {
+    bottom: -5px;
+    width: 25px;
+    transform: rotate(45deg);
+  }
+  .card-exp [type=checkbox]:checked + .tgl-btn span::after {
+    bottom: -5px;
+    width: 25px;
+    transform: rotate(-45deg);
+  }
+  .card-exp [type=checkbox]:not(:checked) ~ .tgl-view .card-image-exp {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .card-exp [type=checkbox]:not(:checked) ~ .tgl-view .card-detail-exp {
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    min-height: 0;
+    max-height: 0;
+  }
+  .card-exp [type=checkbox]:checked ~ .tgl-view .card-image-exp {
+    border-radius: 30px;
+    height: 60px;
+    width: 60px;
+    margin: 10px 0;
+  }
+  .card-exp [type=checkbox]:checked ~ .tgl-view .card-image-exp img {
+    height: 60px;
+  }
+  .card-exp [type=checkbox]:checked ~ .tgl-view .card-title-exp {
+    font-size: 18px;
+    line-height: 60px;
+    margin-top: -80px;
+    margin-left: -10px;
+    padding: 10px 10px 10px 80px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  }
+  .card-exp [type=checkbox]:checked ~ .tgl-view .card-title-exp::before {
+    top: 0px;
+  }
+  .card-exp [type=checkbox]:checked ~ .tgl-view .card-title-exp::after {
+    bottom: -40px;
+  }
+  .card-exp [type=checkbox]:checked ~ .tgl-view .card-detail-exp {
+    opacity: 1;
+    padding: 40px 20px;
+    min-height: 290px;
+    max-height: 400px;
+  }
+  
+  @media only screen and (min-width: 500px) {
+    .grid {
+      margin-left: -20px;
+      margin-right: -20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .card-exp {
+      margin: 20px;
+    }
+  }
+  @media only screen and (min-width: 900px) {
+    .container-exp {
+      margin: 80px auto;
+      max-width: 1200px;
+      width: calc(100% - 160px);
+    }
+  
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
