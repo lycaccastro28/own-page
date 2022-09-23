@@ -18,42 +18,7 @@ footer {
     color: #D4ECDD;
     
  }
- .text
-		{
-			font-size: 20px;
-			text-transform: uppercase;
-			font-weight: 900;
-			position: relative;
-			color: #D4ECDD; 
-      text-align: center;
-		}
-
-		.text::before
-		{
-			content: attr(data-text);
-			position: absolute;
-			color: #fff;
-			width: 0;
-			overflow: hidden;
-			transition: 0.6s;
-		}
-
-		.container::before
-		{
-			content: "";
-			width: 0%;
-			height: 70%;
-			position: absolute;
-			background: #2980b9;
-			right: 0;
-			top: 0;
-			transition: 0.6s;
-		}
-
-		.container:hover .text::before,.container:hover::before
-		{
-			width: 100%;
-		}
+ 
 .container .card
 {
     max-width: 300px;
