@@ -1,8 +1,8 @@
-
-  .section-header {
+.section-header {
     text-align: center;
     margin: 0 auto;
     padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -21,14 +21,14 @@
   /* Left contact page */
   .form-horizontal {
     /*float: left;*/
-    max-width: 100%;
+    max-width: 400px;
     font-family: 'Lato';
     font-weight: 400;
   }
   
   .form-control, 
   textarea {
-     max-width: 400px;;
+    max-width: 100%;
     background-color: #000;
     color: #fff;
     letter-spacing: 1px;
@@ -37,13 +37,13 @@
   .send-button {
     margin-top: 15px;
     height: 34px;
-   
+    width: 400px;
     overflow: hidden;
     transition: all .2s ease-in-out;
   }
   
   .alt-send-button {
-   
+    width: 400px;
     height: 34px;
     transition: all .2s ease-in-out;
   }
@@ -53,6 +53,7 @@
     margin-top: 10px;
     font: 700 12px 'Lato', sans-serif;
     letter-spacing: 2px;
+    
   }
   
   .alt-send-button:hover {
@@ -79,7 +80,7 @@
   .contact-text {
     font: 300 18px 'Lato', sans-serif;
     letter-spacing: 1.9px;
-    color: #D4ECDD;
+    color: #bbb;
   }
   
   .place {
@@ -95,7 +96,7 @@
   }
   
   .contact-text a {
-    color: #D4ECDD;
+    color: #bbb;
     text-decoration: none;
     transition-duration: 0.2s;
   }
@@ -129,7 +130,7 @@
     line-height: 60px;
     border-radius: 50%;
     color: #fff;
-    background-color: #345B63;
+    background-color: rgb(27,27,27);
     cursor: pointer; 
     transition: all .2s ease-in-out;
   }
@@ -159,12 +160,12 @@
   }
   
   .social-media-list li:hover a {
-    color: black;
+    color: #000;
   }
   
   .copyright {
     font: 200 14px 'Oswald', sans-serif;
-    color: #D4ECDD;
+    color: #555;
     letter-spacing: 1px;
     text-align: center;
   }
@@ -209,6 +210,15 @@
       
       margin: 0 auto;
     }
+    .direct-contact-container, .form-horizontal {
+        margin: 0;
+      }  
+      .send-button {
+        margin-top: 15px;
+        height: 34px;
+        overflow: hidden;
+        transition: all .2s ease-in-out;
+      }
    
     
     .name, .email, textarea {
@@ -238,6 +248,7 @@
   
   @media screen and (max-width: 410px) {
     .send-button {
-      width: 98%;
+      width: 99%;
     }
+    
   }
